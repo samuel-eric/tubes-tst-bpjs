@@ -1,4 +1,4 @@
-<div class="main container">
+<div class="main container flex-main">
   <div class="about-img-container">
     <img src="/home-img.jpg" alt="Dokter" class="about-img">
   </div>

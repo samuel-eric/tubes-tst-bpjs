@@ -54,6 +54,8 @@ header .container {
 /* MAIN CONTENT */
 .main {
 	margin: 1rem auto;
+}
+.flex-main {
 	display: flex;
 	justify-content: center;
 	align-items: center;

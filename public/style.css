@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 html,
 body {
 	color: rgba(33, 37, 41, 1);
@@ -10,8 +14,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	height: 100vh;
-	position: relative;
-	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	background-color: #e6f6ed;
 }
 .container {
 	width: 80%;
@@ -46,8 +52,63 @@ header .container {
 
 /* MAIN CONTENT */
 .main {
-	padding: 1rem;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.home-img-container {
+	width: 55%;
 	height: 100%;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #00301721;
+}
+.home-img {
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.home-text-container {
+	box-shadow: 0 0 10px #00301721;
+	background-color: #b3e3c9;
+	padding: 1rem;
+	color: #005126;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.home-text-container h1 {
+	margin: 0;
+}
+.home-text-container h3 {
+	margin-top: 0.7rem;
+	margin-bottom: 0;
+}
+.home-text-container p {
+	margin: 1.2rem 0 1.4rem 0;
+}
+.cta-btn {
+	display: inline-block;
+	padding: 0.6rem 1.3rem;
+	text-align: center;
+	background-color: #005126;
+	font-weight: bold;
+	color: #e6f6ed;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 3px 3px #003017;
+	transform: translate(-3px, -3px);
+	transition: all 0.2s;
+}
+.cta-btn:hover {
+	box-shadow: none;
+	transform: none;
 }
 
 /* FOOTER */
@@ -58,7 +119,5 @@ footer {
 	background-color: rgba(247, 248, 249, 1);
 	padding: 1rem 0;
 	color: #888;
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 }

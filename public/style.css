@@ -121,6 +121,55 @@ header .container {
 	margin: 0.6rem 0;
 }
 
+/* LOGIN */
+.login-card {
+	background-color: #b3e3c9;
+	padding: 2.5rem 1.5rem;
+	border-radius: 10px;
+}
+
+.login-card h1 {
+	margin: 0 0 1.5rem 0;
+	text-align: center;
+	color: #005126;
+}
+
+.login-card form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.3rem;
+}
+
+.login-card form input {
+	font-family: inherit;
+	font-size: 1.1rem;
+	padding: 0.5rem;
+	border-radius: 10px;
+	border: none;
+}
+
+.login-card form button {
+	display: inline-block;
+	padding: 0.6rem 1.3rem;
+	text-align: center;
+	background-color: #005126;
+	font-weight: bold;
+	color: #e6f6ed;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 3px 3px #003017;
+	transform: translate(-3px, -3px);
+	transition: all 0.2s;
+	border: none;
+	font-size: 1.2rem;
+}
+
+.login-card form button:hover {
+	box-shadow: none;
+	transform: none;
+}
+
 /* FOOTER */
 footer {
 	display: flex;

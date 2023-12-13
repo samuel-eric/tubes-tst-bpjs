@@ -9,7 +9,7 @@
       <ul class="links">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/peserta">Data Peserta</a></li>
+        <li><a href="/peserta">Data Diri</a></li>
         <li><a href="/iuran">Iuran</a></li>
         <li><a href="/logout">Logout</a></li>
       </ul>

@@ -15,6 +15,7 @@ class LoginController extends BaseController {
     $cek = $model->login($no_kartu, $password);
     if ($cek){
       session()->set('nama_user', $cek['nama']);
+      session()->set('no_kartu', $cek['no_kartu']);
       return redirect()->to('/');
     } else {
       return redirect()->to('/login');

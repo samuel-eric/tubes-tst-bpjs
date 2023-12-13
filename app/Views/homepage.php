@@ -3,9 +3,16 @@
     <img src="/home-img.jpg" alt="Dokter" class="home-img">
   </div>
     <div class="home-text-container">
-      <h1>BPJS TST</h1>
-      <h3>Daftarkan diri Anda sekarang!</h3>
-      <p>Pelayanan mudah, cepat, dan simpel</p>
-      <a href="/daftar" class="cta-btn">Daftar sekarang!</a>
+      <?php if(session()->has('nama_user')): ?>
+        <h1>BPJS TST</h1>
+        <h3>Halo <?= session()->get('nama_user')?></h3>
+        <p>Jangan lupa membayar iuranmu!</p>
+        <a href="/iuran" class="cta-btn">Bayar sekarang!</a>
+      <?php else: ?>
+        <h1>BPJS TST</h1>
+        <h3>Daftarkan diri Anda sekarang!</h3>
+        <p>Pelayanan mudah, cepat, dan simpel</p>
+        <a href="/daftar" class="cta-btn">Daftar sekarang!</a>
+      <?php endif ?>
     </div>
 </div>

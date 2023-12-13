@@ -6,6 +6,10 @@ class About extends BaseController
 {
     public function index(): string
     {
-        return view('header').view('about').view('footer');
+        if(session()->has('nama_user')) {
+            return view('headerAfterLogin').view('about').view('footer');
+        } else {
+            return view('headerBeforeLogin').view('about').view('footer');
+        }
     }
 }

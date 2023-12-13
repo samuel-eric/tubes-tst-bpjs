@@ -5,7 +5,7 @@ use App\Models\PesertaBPJS;
 
 class LoginController extends BaseController {
   public function index() {
-    return view('header').view('login').view('footer');
+    return view('headerBeforeLogin').view('login').view('footer');
   }
 
   public function login_action(){

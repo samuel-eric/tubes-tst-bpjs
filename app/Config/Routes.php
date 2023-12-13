@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'About::index');
 $routes->get('/daftar', 'DaftarController::index');
-$routes->get('/peserta/(:num)', 'PesertaBpjsAPI::index/$1');
+$routes->get('/api/peserta/(:num)', 'PesertaBpjsAPI::index/$1');
 $routes->get('/login', 'LoginController::index');
 $routes->post('/login_action', 'LoginController::login_action');
+$routes->get('/logout', 'LoginController::logout');

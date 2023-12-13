@@ -17,13 +17,20 @@
       text-rendering: optimizeLegibility;
       height: 100vh;
       position: relative;
+      overflow: hidden;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
     }
     header {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
       background-color: rgba(247, 248, 249, 1);
       padding: 1.5rem 0;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .logo-img {
       width: 100%;
@@ -40,7 +47,10 @@
     .links a:hover {
       color: #00a14c;
     }
-
+    .main {
+      padding: 1rem;
+      height: 100%;
+    }
     footer {
       display: flex;
       justify-content: center;

@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'About::index');
 $routes->get('/daftar', 'DaftarController::index');
+$routes->get('/peserta/(:num)', 'PesertaBpjsAPI::index/$1');

@@ -132,14 +132,22 @@ header .container {
 	margin: 0.6rem 0;
 }
 
-/* LOGIN */
+/* LOGIN + DAFTAR*/
 .login form {
 	display: flex;
 	flex-direction: column;
 	gap: 1.3rem;
 }
 
-.login form input {
+.daftar form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+}
+
+.login form input,
+.daftar form input,
+.daftar form select {
 	font-family: inherit;
 	font-size: 1.1rem;
 	padding: 0.5rem;
@@ -147,7 +155,12 @@ header .container {
 	border: none;
 }
 
-.login form button {
+.daftar form select {
+	grid-column: 1 / -1;
+}
+
+.login form button,
+.daftar form button {
 	display: inline-block;
 	padding: 0.6rem 1.3rem;
 	text-align: center;
@@ -162,9 +175,11 @@ header .container {
 	transition: all 0.2s;
 	border: none;
 	font-size: 1.2rem;
+	grid-column: 1 / -1;
 }
 
-.login form button:hover {
+.login form button:hover,
+.daftar form button:hover {
 	box-shadow: none;
 	transform: none;
 }

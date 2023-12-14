@@ -203,6 +203,13 @@ header .container {
 	margin: 0;
 }
 
+/* DAFTAR BERHASIL */
+.daftar-berhasil p {
+	text-align: center;
+	font-size: 1.2rem;
+	color: #005126;
+}
+
 /* FOOTER */
 footer {
 	display: flex;

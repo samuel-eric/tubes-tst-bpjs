@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class IuranBPJS extends Model {
   protected $table = 'iuran_bpjs';
   protected $primaryKey = 'id';
-  protected $allowedFields = ['jumlah', 'no_kartu'];
+  protected $allowedFields = ['jumlah', 'no_kartu', 'bukti_bayar'];
 
   public function getDataIuran($no_kartu) {
     $data = $this->findAll();

@@ -14,3 +14,4 @@ $routes->post('/login_action', 'LoginController::login_action');
 $routes->get('/logout', 'LoginController::logout');
 $routes->get('/peserta', 'PesertaController::index');
 $routes->get('/api/(:segment)/(:segment)/peserta/(:num)', 'PesertaBpjsAPI::index/$1/$2/$3');
+$routes->get('/iuran', 'IuranController::index');

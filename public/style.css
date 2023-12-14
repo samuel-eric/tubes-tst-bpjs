@@ -210,6 +210,26 @@ header .container {
 	color: #005126;
 }
 
+/* IURAN */
+.iuran {
+	color: #005126;
+	text-align: center;
+}
+th,
+td {
+	padding: 0.6rem;
+}
+th {
+	background-color: #e6f6ed;
+}
+table {
+	border-spacing: 0;
+	border-collapse: separate;
+	border-radius: 10px;
+	border: 2px solid #33b470;
+	overflow: hidden;
+}
+
 /* FOOTER */
 footer {
 	display: flex;

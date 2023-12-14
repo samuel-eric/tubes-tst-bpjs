@@ -26,6 +26,7 @@
       <h3>No Data</h3>
       <p>Sepertinya Anda belum pernah membayar iuran...</p>
     <?php endif ?>
+    <a href="/bayar_iuran" class="cta-btn">Bayar Iuran</a>
   </div>
 
 </div>

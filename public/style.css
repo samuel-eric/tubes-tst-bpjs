@@ -195,6 +195,7 @@ header .container {
 }
 .data-peserta-item {
 	text-align: center;
+	max-width: 200px;
 }
 .data-peserta-item h4 {
 	margin: 0 0 0.8rem 0;
@@ -228,6 +229,41 @@ table {
 	border-radius: 10px;
 	border: 2px solid #33b470;
 	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
+/* BAYAR IURAN */
+.bayar-iuran form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.1rem;
+}
+.bayar-iuran form input {
+	padding: 0.5rem 0.3rem;
+	text-align: center;
+	font-size: 1rem;
+	border-radius: 10px;
+	border: none;
+}
+.bayar-iuran form button {
+	display: inline-block;
+	padding: 0.6rem 1.3rem;
+	text-align: center;
+	background-color: #005126;
+	font-weight: bold;
+	color: #e6f6ed;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 3px 3px #003017;
+	transform: translate(-3px, -3px);
+	transition: all 0.2s;
+	border: none;
+	font-size: 1.2rem;
+}
+.bayar-iuran form button:hover {
+	box-shadow: none;
+	transform: none;
 }
 
 /* FOOTER */

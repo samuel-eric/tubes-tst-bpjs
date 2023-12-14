@@ -1,7 +1,7 @@
 <div class="main flex-main">
   <div class="card daftar">
     <h1>Daftar</h1>
-    <form action="/signup_action" method="POST">
+    <form action="/daftar_action" method="POST">
       <input type="text" name="nama" placeholder="Nama Lengkap" required>
       <input type="text" name="nik" placeholder="NIK" required>
       <input type="text" name="alamat" placeholder="Alamat" required>

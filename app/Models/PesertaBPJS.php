@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class PesertaBPJS extends Model {
   protected $table = 'peserta_bpjs';
   protected $primaryKey = 'no_kartu';
+  protected $allowedFields = ['nama', 'nik', 'password', 'alamat', 'tanggal_lahir', 'jenis_kelamin', 'no_telp', 'no_kartu'];
 
   public function getDataPeserta($no_kartu) {
     return $this->find($no_kartu);
@@ -19,5 +20,9 @@ class PesertaBPJS extends Model {
     } else {
       return null;
     }
+  }
+
+  public function daftar($data) {
+    return $this->insert($data);
   }
 }

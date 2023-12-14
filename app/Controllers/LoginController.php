@@ -11,7 +11,7 @@ class LoginController extends BaseController {
   public function login_action(){
     $model = model(PesertaBPJS::class);
     $no_kartu = $this->request->getPost('no_kartu');
-    $password = $this->request->getPost('password');
+    $password = md5($this->request->getPost('password'));
     $cek = $model->login($no_kartu, $password);
     if ($cek){
       session()->set('nama_user', $cek['nama']);

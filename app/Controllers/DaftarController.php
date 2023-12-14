@@ -19,7 +19,7 @@ class DaftarController extends BaseController
         $tanggal_lahir = date("Y-m-d H:i:s",strtotime($input_tanggal_lahir));
         $jenis_kelamin = $this->request->getPost('jenis_kelamin');
         $no_telp = $this->request->getPost('no_telp');
-        $password = $this->request->getPost('password');
+        $password = md5($this->request->getPost('password'));
         $no_kartu = rand(1000000000, 9999999999);
 
         $data_daftar = [

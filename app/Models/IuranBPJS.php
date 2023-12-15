@@ -16,6 +16,10 @@ class IuranBPJS extends Model {
     });
   }
 
+  public function getAllIuran() {
+    return $this->findAll();
+  }
+
   public function bayarIuran($data) {
     return $this->insert($data, false);
   }

@@ -8,6 +8,8 @@ class Home extends BaseController
     {
         if(session()->has('nama_user')) {
             return view('headerAfterLogin').view('homepage').view('footer');
+        } elseif (session()->has('admin')) {
+            return view('headerAdmin').view('homepage').view('footer');
         } else {
             return view('headerBeforeLogin').view('homepage').view('footer');
         }

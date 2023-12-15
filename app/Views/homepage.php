@@ -8,6 +8,11 @@
         <h3>Halo <?= session()->get('nama_user')?></h3>
         <p>Jangan lupa membayar iuranmu!</p>
         <a href="/iuran" class="cta-btn">Bayar sekarang!</a>
+      <?php elseif(session()->has('admin')): ?>
+        <h1>BPJS TST</h1>
+        <h3>Halo Admin</h3>
+        <p>Semoga harimu menyenangkan!</p>
+        <a href="/daftar_peserta" class="cta-btn">Lihat daftar peserta</a>
       <?php else: ?>
         <h1>BPJS TST</h1>
         <h3>Daftarkan diri Anda sekarang!</h3>

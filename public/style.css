@@ -211,14 +211,16 @@ header .container {
 	color: #005126;
 }
 
-/* IURAN */
-.iuran {
+/* IURAN, DAFTAR PESERTA, DAFTAR IURAN*/
+.iuran,
+.daftar-peserta {
 	color: #005126;
 	text-align: center;
 }
 th,
 td {
-	padding: 0.6rem;
+	padding: 1rem 0.6rem;
+	max-width: 150px;
 }
 th {
 	background-color: #e6f6ed;
@@ -229,6 +231,8 @@ table {
 	border-radius: 10px;
 	border: 2px solid #33b470;
 	overflow: hidden;
+}
+.iuran table {
 	margin-bottom: 2rem;
 }
 .iuran .cta-btn {

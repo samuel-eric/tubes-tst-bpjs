@@ -15,6 +15,12 @@ class IuranController extends BaseController {
     return view('headerAfterLogin').view('bayarIuran').view('footer');
   }
 
+  public function daftar_iuran() {
+    $model = model(IuranBPJS::class);
+    $data['daftar_iuran'] = $model->getAllIuran();
+    return view('headerAdmin', $data).view('adminDaftarIuran').view('footer');
+  }
+
   public function bayar_iuran_action() {
     $model = model(IuranBPJS::class);
     $no_kartu = session()->get('no_kartu');

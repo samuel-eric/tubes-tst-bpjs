@@ -8,6 +8,8 @@ class About extends BaseController
     {
         if(session()->has('nama_user')) {
             return view('headerAfterLogin').view('about').view('footer');
+        } elseif (session()->has('admin')) {
+            return view('headerAdmin').view('about').view('footer');
         } else {
             return view('headerBeforeLogin').view('about').view('footer');
         }

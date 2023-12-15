@@ -7,6 +7,7 @@
           <th>No Kartu Pembayar</th>
           <th>Tanggal Pembayaran</th>
           <th>Jumlah</th>
+          <th>Bukti Bayar</th>
         </tr>
         <?php foreach($daftar_iuran as $iuran): ?>
           <tr>
@@ -18,6 +19,9 @@
             </td>
             <td>
               Rp. <?= esc($iuran['jumlah']) ?>
+            </td>
+            <td>
+              <a href="<?= site_url('download/' . $iuran['id']) ?>">Link</a>
             </td>
           </tr>
         <?php endforeach ?>

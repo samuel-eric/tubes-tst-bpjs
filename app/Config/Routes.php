@@ -26,6 +26,7 @@ $routes->post('/bayar_iuran_action', 'IuranController::bayar_iuran_action');
 // ADMIN
 $routes->get('/daftar_peserta', 'PesertaController::daftar_peserta');
 $routes->get('/daftar_iuran', 'IuranController::daftar_iuran');
+$routes->get('/download/(:segment)', 'IuranController::download/$1');
 
 // API HOSPITAL
 $routes->get('/api/(:segment)/(:segment)/peserta/(:num)', 'PesertaBpjsAPI::index/$1/$2/$3');

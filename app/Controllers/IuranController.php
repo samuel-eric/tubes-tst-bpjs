@@ -52,4 +52,18 @@ class IuranController extends BaseController {
       }
     }
   }
+
+  public function download($id) {
+    $model = model(IuranBPJS::class);
+    $file = $model->getBuktiBayar($id);
+    echo $file;
+    if ($file->isFile()) {
+      ob_clean();
+      $extension = pathinfo($file->getPathname(), PATHINFO_EXTENSION);
+      header('Content-Type: image/' . $extension);
+      header('Content-Disposition: attachment; filename="bukti-bayar-' . $model->getNoKartu($id) . "." . $file->getExtension() . '"');
+      readfile($file->getPathname());
+      exit();
+    }
+  }
 }

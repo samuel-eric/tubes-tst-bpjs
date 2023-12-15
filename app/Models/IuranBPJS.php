@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use CodeIgniter\Files\File;
 
 class IuranBPJS extends Model {
   protected $table = 'iuran_bpjs';
@@ -22,5 +23,15 @@ class IuranBPJS extends Model {
 
   public function bayarIuran($data) {
     return $this->insert($data, false);
+  }
+
+  public function getBuktiBayar($id) {
+    $data = $this->find($id);
+    return new File(WRITEPATH . 'uploads/' . $data['bukti_bayar']);
+  }
+
+  public function getNoKartu($id) {
+    $data = $this->find($id);
+    return $data['no_kartu'];
   }
 }

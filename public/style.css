@@ -232,6 +232,9 @@ table {
 	border: 2px solid #33b470;
 	overflow: hidden;
 }
+td a {
+	color: inherit;
+}
 .iuran table {
 	margin-bottom: 2rem;
 }

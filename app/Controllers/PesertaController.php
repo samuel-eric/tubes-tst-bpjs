@@ -5,15 +5,23 @@ use App\Models\PesertaBPJS;
 
 class PesertaController extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-      $model = model(PesertaBPJS::class);
-      $data['peserta'] = $model->getDataPeserta(session()->get('no_kartu'));
-      return view('headerAfterLogin', $data).view('peserta').view('footer');
+      if(session()->has('nama_user')) {
+        $model = model(PesertaBPJS::class);
+        $data['peserta'] = $model->getDataPeserta(session()->get('no_kartu'));
+        return view('headerAfterLogin', $data).view('peserta').view('footer');
+      } else {
+        return redirect()->to('/login');
+      }
     }
     public function daftar_peserta() {
-      $model = model(PesertaBPJS::class);
-      $data['daftar_peserta'] = $model->getAllPeserta();
-      return view('headerAdmin', $data).view('adminDaftarPeserta').view('footer');
+      if(session()->has('admin')) {
+        $model = model(PesertaBPJS::class);
+        $data['daftar_peserta'] = $model->getAllPeserta();
+        return view('headerAdmin', $data).view('adminDaftarPeserta').view('footer');
+      } else {
+        return redirect()->to('/login_admin');
+      }
     }
 }

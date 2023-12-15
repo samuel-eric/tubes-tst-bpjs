@@ -6,19 +6,31 @@ use App\Models\IuranBPJS;
 class IuranController extends BaseController {
   protected $helpers = ['form'];
   public function index() {
-    $model = model(IuranBPJS::class);
-    $data['daftar_iuran'] = $model->getDataIuran(session()->get('no_kartu'));
-    return view('headerAfterLogin', $data).view('iuran').view('footer');
+    if(session()->has('nama_user')) {
+      $model = model(IuranBPJS::class);
+      $data['daftar_iuran'] = $model->getDataIuran(session()->get('no_kartu'));
+      return view('headerAfterLogin', $data).view('iuran').view('footer');
+    } else {
+      return redirect()->to('/login');
+    }
   }
 
   public function bayar_iuran() {
-    return view('headerAfterLogin').view('bayarIuran').view('footer');
+    if(session()->has('nama_user')) {
+      return view('headerAfterLogin').view('bayarIuran').view('footer');
+    } else {
+      return redirect()->to('/login');
+    }
   }
 
   public function daftar_iuran() {
-    $model = model(IuranBPJS::class);
-    $data['daftar_iuran'] = $model->getAllIuran();
-    return view('headerAdmin', $data).view('adminDaftarIuran').view('footer');
+    if(session()->has('admin')) {
+      $model = model(IuranBPJS::class);
+      $data['daftar_iuran'] = $model->getAllIuran();
+      return view('headerAdmin', $data).view('adminDaftarIuran').view('footer');
+    } else {
+      return redirect()->to('/login_admin');
+    }
   }
 
   public function bayar_iuran_action() {

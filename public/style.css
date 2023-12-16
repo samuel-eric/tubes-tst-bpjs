@@ -155,9 +155,9 @@ header .container {
 	border: none;
 }
 
-.daftar form select {
+/* .daftar form select {
 	grid-column: 1 / -1;
-}
+} */
 
 .login form button,
 .daftar form button {
@@ -242,7 +242,13 @@ td a {
 	margin-top: 1rem;
 }
 /* BAYAR IURAN */
+.bayar-iuran {
+	text-align: center;
+	color: #005126;
+}
 .bayar-iuran form {
+	border-top: 1px solid #005126;
+	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: 1.1rem;

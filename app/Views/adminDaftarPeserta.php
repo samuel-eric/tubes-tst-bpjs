@@ -5,6 +5,7 @@
       <table>
         <tr>
           <th>No Kartu</th>
+          <th>Kelas</th>
           <th>Nama</th>
           <th>NIK</th>
           <th>Alamat</th>
@@ -16,6 +17,9 @@
           <tr>
             <td>
               <?= esc($peserta['no_kartu']) ?>
+            </td>
+            <td>
+              <?= esc($peserta['kelas']) ?>
             </td>
             <td>
               <?= esc($peserta['nama']) ?>

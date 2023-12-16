@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\PesertaBPJS;
 use App\Models\Users;
+use App\Models\KelasBPJS;
 
 class LoginController extends BaseController {
   public function index() {
@@ -19,8 +20,10 @@ class LoginController extends BaseController {
     $password = md5($this->request->getPost('password'));
     $cek = $model->login($no_kartu, $password);
     if ($cek){
+      $modelKelas = model(KelasBPJS::class);
       session()->set('nama_user', $cek['nama']);
       session()->set('no_kartu', $cek['no_kartu']);
+      session()->set('biaya_iuran', $modelKelas->getBiayaIuran($cek['kelas']));
       return redirect()->to('/');
     } else {
       return redirect()->to('/login');
@@ -41,7 +44,12 @@ class LoginController extends BaseController {
   }
 
   public function logout() {
-    session()->destroy();
-    return redirect()->to('/login');
+    if(session()->has('admin')) {
+      session()->destroy();
+      return redirect()->to('/login_admin');
+    } else {
+      session()->destroy();
+      return redirect()->to('/login');
+    }
   }
 }

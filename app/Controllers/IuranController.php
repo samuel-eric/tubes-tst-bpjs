@@ -36,7 +36,7 @@ class IuranController extends BaseController {
   public function bayar_iuran_action() {
     $model = model(IuranBPJS::class);
     $no_kartu = session()->get('no_kartu');
-    $jumlah = $this->request->getPost('jumlah');
+    $jumlah = session()->get('biaya_iuran');
     $bukti_bayar = $this->request->getFile('bukti_bayar');
     if($bukti_bayar->isValid() && !$bukti_bayar->hasMoved()) {
       $newName = $bukti_bayar->getRandomName();

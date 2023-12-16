@@ -11,6 +11,12 @@
         <option value="M">Laki-laki</option>
         <option value="F">Perempuan</option>
       </select>
+      <select name="kelas" required>
+        <option value="">Pilih Kelas</option>
+        <option value="1">Kelas 1</option>
+        <option value="2">Kelas 2</option>
+        <option value="3">Kelas 3</option>
+      </select>
       <input type="text" name="no_telp" placeholder="Nomor Telepon" required>
       <input type="password" name="password" placeholder="Password" required>
       <button type="submit">Daftar</button>

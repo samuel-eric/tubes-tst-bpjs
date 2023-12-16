@@ -3,6 +3,14 @@
     <h1>Data</h1>
     <div class="data-peserta-container">
       <div class="data-peserta-item">
+        <h4>Nomor Kartu</h4>
+        <p><?= $peserta['no_kartu'] ?></p>
+      </div>
+      <div class="data-peserta-item">
+        <h4>Kelas</h4>
+        <p><?= $peserta['kelas'] ?></p>
+      </div>
+      <div class="data-peserta-item">
         <h4>Nama</h4>
         <p><?= $peserta['nama'] ?></p>
       </div>

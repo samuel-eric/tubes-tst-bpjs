@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class PesertaBPJS extends Model {
   protected $table = 'peserta_bpjs';
   protected $primaryKey = 'no_kartu';
-  protected $allowedFields = ['nama', 'nik', 'password', 'alamat', 'tanggal_lahir', 'jenis_kelamin', 'no_telp', 'no_kartu'];
+  protected $allowedFields = ['nama', 'nik', 'password', 'alamat', 'tanggal_lahir', 'jenis_kelamin', 'no_telp', 'no_kartu', 'kelas'];
 
   public function getAllPeserta() {
     return $this->findAll();
